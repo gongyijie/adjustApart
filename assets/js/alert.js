@@ -1,49 +1,63 @@
 var saveRegion = [];//地区名数组
 var saveProject = [];//项目数组
-function showRegion(){
-    // $.ajax(
-    //     {
-    //         type:'get',
-    //         url : '',
-    //         dataType : 'jsonp',
-    //         jsonp:"jsoncallback",
-    //         success  : function(data) {
-                // alert("用户名："+ data.user +" 密码："+ data.pass);
-                let region_modal = $('#region-modal');
-                region_modal.css("display","block");
-                // var areadata = data;
 
-                $('#close-region').click(function () {
-                    region_modal.css("display","none");
-                });
-    //         },
-    //         error : function() {
-    //             alert('fail');
-    //         }
-    //     }
-    // ); //显示地区模态框
+$(function(){
+    getProvinces();
+    getDisPro();
+});
+
+/**
+ * 添加元素
+ * data 添加的值
+ * id 加入元素标签的id
+ * length 每一行添加元素的数量
+ */
+function addTag(data, id, length){
+    var content = "";
+    var count   = data.length;
+    $.each(data, function (index, value) {
+        content += "<li onclick='selectionLi(this)'>" + value + "</li>";
+        if((index+1) % length == 0 || (index+1) == count){
+            content = "<ul>" + content + "</ul>"
+            $(id).append(content);
+            content = "";
+        }
+    });
 }
-function showProject() { //显示项目模态框
-    // $.ajax(
-    //     {
-    //         type:'get',
-    //         url : '',
-    //         dataType : 'jsonp',
-    //         jsonp:"jsoncallback",
-    //         success  : function(data) {
-                // alert("用户名："+ data.user +" 密码："+ data.pass);
-                let project_modal = $('#project-modal');
-                project_modal.css("display","block");
-                // var projectdata = data;
-                $('#close-project').click(function () {
-                    project_modal.css("display","none");
-                });
-    //         },
-    //         error : function() {
-    //             alert('fail');
-    //         }
-    //     }
-    // );
+
+
+//获取省份
+function getProvinces(){
+    request('get', '/admin/dispen/getProvinces', {}, function(data){
+        addTag(data, "#provinces", 8);
+    });
+}
+
+//获取项目
+function getDisPro(){
+    request('get', '/admin/dispen/getDisPro', {}, function(data){
+        addTag(data, "#dispro", 4);
+    });
+}
+
+ //显示省份模态框
+function showRegion(){
+    let region_modal = $('#region-modal');
+    region_modal.css("display","block");
+
+    $('#close-region').click(function () {
+        region_modal.css("display","none");
+    });
+}
+
+ //显示项目模态框
+function showProject() {
+    let project_modal = $('#project-modal');
+    project_modal.css("display","block");
+
+    $('#close-project').click(function () {
+        project_modal.css("display","none");
+    });
 }
 
 /**
@@ -101,74 +115,43 @@ function validateProject() {
     return true;
 }
 
-//验证手机号是否合法
-function validatetelephone() {
-    let telephone = $("#telephone").val();
-        re = /^1\d{10}$/;
-    if (re.test(telephone)) {
-        return telephone;
-    } else {
-        layer.alert("尊敬的用户：你输入的手机号有误！");
-        return false;
-    }
+/**
+ * 订阅
+ * phone 电话号码
+ */
+function subscribe(phone) {
+    request('post', '/admin/dispen/subscribe', {
+        "proArr" : saveRegion,
+        "jectArr": saveProject,
+        "phone"  : phone,
+        "grade"  : 0
+    }, function(data){
+        layer.alert("订阅成功");
+        $('#tel-modal').css("display","none");
+    });
 }
 
 //发送后台
 function sendInformation() {
-    // var telephone = validatetelephone();//提交前验证手机号
-    // var region    = validateRegion();   //提交前验证地区选择是否合法
-    // var project   = validateProject();  //提交前验证项目选择是否合法
-    // if(!telephone || !region || !project){
-    //     console.log(555);
-    //     return false;
-    // }
-    let tel_modal = $('#tel-modal');
-    tel_modal.css("display","block");
+    let phone = $.trim($("#telephone").val());
+
+    var region    = validateRegion();   //提交前验证地区选择是否合法
+    var project   = validateProject();  //提交前验证项目选择是否合法
+    var telephone = validatetelephone(phone);//提交前验证手机号
+
+    if(!telephone || !region || !project){
+        return false;
+    }
+
+    $('#tel-modal').css("display","block");
+
     //手机验证码
-    var oBtn = document.getElementById('telCode');
-    var closetel= document.getElementById('close-tel');
-    var flag = true;
-
-    oBtn.addEventListener("click", function () {
-        var time = 60;
-        oBtn.classList.add('disable');
-        oBtn.innerText = '60';
-        oBtn.style.opacity = '0.6';
-        oBtn.style.paddingLeft = '42%';
-        if (flag) {
-            flag = false;
-            var timer = setInterval(() => {
-                time--;
-                oBtn.innerText = time;
-                if (time === 0) {
-                    clearInterval(timer);
-                    oBtn.innerText = '重新获取';
-                    oBtn.style.opacity = '1';
-                    oBtn.style.paddingLeft = '22%';
-                    oBtn.classList.remove('disable');
-                    flag = true;
-                }
-            }, 1000)
-        }
+    $('#telCode').click(function () {
+        sendSmsCode(phone);
     });
+
     $('#close-tel').click(function () {
-        tel_modal.css("display","none");
+        var code = $.trim($("#code").val());
+        judgeSms(phone, code, subscribe);
     });
-    // layer.alert("提交成功");
-    // console.log(66666);
-}
-
-// Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
-function OnInput (event) {
-    if(event.target.value != '') {
-        $('#closetel').css("opacity","1"); ;
-    }
-}
-// Internet Explorer
-function OnPropChanged (event) {
-    if (event.propertyName.toLowerCase () == "value") {
-        if(event.target.value != '') {
-            $('#closetel').css("filter","1");
-        }
-    }
 }

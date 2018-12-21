@@ -592,7 +592,7 @@
                                 </div>
                                 <div class="c-div div_9zJDdG">
                                     <input class="c-input input_CZk4gE" name="input1" placeholder="填写手机号" type="text" id="inputTel">
-                                    <a class="btn c-button button_9dk3VD" type="button" onclick="Data()">开始订阅</a>
+                                    <a class="btn c-button button_9dk3VD" type="button" onclick="sendInformation()">开始订阅</a>
                                     <h1 class="c-heading heading_oBRVil blue dingyue">4月30日我们将停止调剂信息推送服务，
                                         <br>您也可以随时电话联络我们取消订阅。
                                     </h1>
@@ -787,9 +787,89 @@
             </p>
         </div>
   </div>
-  <link rel="stylesheet" href="../assets/un_css/styles.css">
-  <script>
-        function change(i) {       
+    <div id="tel-modal" class="modal">
+        <div class="telCo modal-contents">
+            <span class="code"><input type="text" id="code" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" /></span>
+            <span class="codeCheck"><a class="checkTel" type="button" id="telCode">获取验证码</a></span>
+            <a class="checkTels" type="button" id="close-tel">确定</a>
+        </div>
+    </div>
+    <style>
+        .telCo{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            width: 33%;
+            max-width: 700px;
+            height: 26%;
+            max-height: 500px;
+            margin: 180px auto;
+            border-radius: 10px;
+            background-color: #fff;
+            -webkit-animation: zoom 0.6s;
+            animation: zoom 0.6s;
+            resize: both;
+            overflow: auto;
+            position: relative;
+        }
+        .modal-contents span{
+            display: inherit;
+            position: absolute;
+        }
+        .modal-contents .code{
+            top: 26%;
+            left: 10%;
+        }
+        .modal-contents .codeCheck{
+            top: 25.5%;
+            right: 10%;
+        }
+        .modal-contents input {
+            width: 240px;
+            text-align: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(49, 181, 121);
+            color: rgb(18, 23, 55);
+            height: 40px;
+        }
+        .modal-contents a{
+            color: #fff;
+        }
+        .modal-contents .checkTel{
+            width: 120px;
+            height: 44px;
+            background-color: rgb(49, 181, 121);
+            border-radius: 4px;
+            padding-bottom: 0px;
+            padding-top: 11px;
+            font-size: 16px;
+            font-weight: normal;
+            padding-left: 17%;
+        }
+        .modal-contents .checkTels{
+            position: absolute;
+            width: 150px;
+            height: 48px;
+            background-color: rgb(49, 181, 121);
+            border-radius: 4px;
+            padding-bottom: 0px;
+            padding-top: 11px;
+            font-size: 18px;
+            font-weight: normal;
+            bottom: 15%;
+            right: 35%;
+            padding-left: 12%;
+            opacity: 0.6;
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/un_css/styles.css">
+    <script src="../assets/js/jquery-3.3.1.js"></script>
+    <script src="../assets/layer/layer.js"></script>
+    <script type="text/javascript" src="../assets/js/public.js"></script>
+    <script type="text/javascript" src="../assets/js/alert2.js"></script>
+    <script>
+        function change(i) {
             var div_9BBDvp = document.getElementsByClassName("div_9BBDvp")[i];
             var a = div_9BBDvp.getElementsByTagName('h1')[0];
             var b = div_9BBDvp.getElementsByTagName('h1')[1];
@@ -806,13 +886,6 @@
                 div_I85Us5.classList.add("c-state1");
             }  
         }
-        function Data() {
-            var data = document.getElementById("inputTel").value;  
-            if (!(/^1[34578]\d{9}$/.test(data))) {
-                alert("请输入正确手机号");
-            };
-        }
-
         function changes(i) {
             var state = document.getElementsByClassName("c-state")[i];
             var states = document.getElementsByClassName("c-states")[i];
@@ -837,6 +910,6 @@
                 h2.style.color = "rgb(18, 23, 55)";
             }
         }
-  </script>
+    </script>
 </body>
 </html>
