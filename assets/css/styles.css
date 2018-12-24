@@ -1,4 +1,49 @@
 @media all {
+	.header_ms{
+        display:flex;
+        justify-content:space-between;
+    }
+    .modal-contents .code{
+        margin: 13% 5% 4% 18%;
+    }
+    .modal-contents .codeCheck{
+        width: 150px;
+        margin: 14% 18% 4% 0;
+    }
+    .modal-contents input {
+    	width: 250px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 40px;
+    }
+    .modal-contents a{ 
+        color: #fff;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px;
+        font-size: 17px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 48px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px 12%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 10%;
+    }
 .section_a550beab{position: relative;} .section_a550beab img{position: absolute; bottom: 0; right: 0;} .section_a550beab .closes{position: absolute;bottom: 20px;right: 8px;width: 60px;height: 60px;}
 .cbsect_b547f460{padding-bottom: 100px; padding-top:  100px; background-color:  rgba(0, 0, 0, 0); }
 .cbdiv_304187f5{position:  absolute; z-index:  0; bottom: 0; right: 0; top: 0; left: 0; }
@@ -314,7 +359,6 @@
 .cbhead_84484ec3::before{content:  ""; position:  absolute; bottom: -12px; height:  1px; width:  0px; background-color:  currentcolor; }
 .cbhead_024b6eea::before{content:  ""; position:  absolute; bottom: -12px; height:  1px; width:  0px; background-color:  currentcolor; }
 .button_9dk3VD:active{background-color: rgba(49,181,121,1); }
-
 .modal{background: rgba(18, 23, 55, 0.9);}
 .areas{width: 723px;height: 428px;background-color: #ffffff;border-radius: 10px;border: solid 2px #31b579; margin: 10% auto;}
 .area-part{padding: 3% 39% 5% 39%;margin-left: auto;margin-right: auto;}
@@ -325,7 +369,87 @@
 .cont ul .botton_area::after{ content: ""; display: inline-block; width: 14px; height: 10px; margin-left: 5px; vertical-align: middle; background: url("../img/dh.png") no-repeat center; background-size: 100%;}
 .areaBtn{margin: 6% 0 0 33%;}
 } 
+@media (max-width: 1240px) {
+	.modal-contents .code{
+        margin: 18% 5% 4% 18%;
+    }
+    .modal-contents .codeCheck{
+        width: 150px;
+        margin: 20% 18% 4% 0;
+    }
+    .modal-contents input {
+    	width: 200px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 40px;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 48px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px 11%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 10%;
+    }
+}
 @media (max-width: 991px) {
+	.modal-contents .code{
+        margin: 20% 5% 4% 18%;
+    }
+    .modal-contents .codeCheck{
+        width: 120px;
+        margin: 22% 18% 4% 0;
+    }
+    .modal-contents input {
+    	width: 150px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 40px;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 48px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px 8%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 10%;
+    }
+
+
 .cbdiv_d014f572{width:  95%; Width: 100%; }
 .container_uRqtWz{padding-left:  30px; padding-right:  30px; width: 100%; }
 .div_z7kuKb{width: 100%; }
@@ -395,6 +519,50 @@
 .cont ul .botton_area::after{ content: ""; display: inline-block; width: 14px; height: 10px; margin-left: 5px; vertical-align: middle; background: url("../img/dh.png") no-repeat center; background-size: 100%;}
 .areaBtn{margin: 6% 0 0 33%;}
 } 
+
+
+@media (max-width: 780px) {
+	.modal-contents .code{
+        margin: 20% 5% 4% 14%;
+    }
+    .modal-contents .codeCheck{
+        width: 93px;
+        margin: 24% 14% 4% 0;
+    }
+    .modal-contents input {
+    	width: 100px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 40px;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 13px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 40px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 6px 8%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 35%;
+    }
+	
+}
+
 @media (max-width: 767px) {
 .cbdiv_1c7d9f41{width: 320px; }
 .cbdiv_d014f572{width:  95%; Width: 100%; }
@@ -536,3 +704,94 @@
 .heading_RFblVD{font-size: 13px;}	
 } 
 @media (min-width: 768px) and (max-width: 991px) {} 
+
+
+
+@media (max-width: 550px) {
+	.modal-contents {
+	    height: 22%;
+	}
+	.modal-contents .code{
+        margin: 21% 5% 4% 4%;
+    }
+    .modal-contents .codeCheck{
+        width: 80px;
+        margin: 24% 0 4% 0;
+    }
+    .modal-contents input {
+    	width: 95px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 30px;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 13px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 30px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 6px 8%;
+        font-size: 12px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 7%;
+    }
+	
+}
+@media (max-width: 400px) {
+	.modal-contents {
+	    height: 28%;
+	}
+	.modal-contents .code{
+        margin: 21% 5% 4% 4%;
+    }
+    .modal-contents .codeCheck{
+        width: 80px;
+        margin: 24% 0 4% 0;
+    }
+    .modal-contents input {
+    	width: 95px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 30px;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 8px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 40px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 10px 8%;
+        font-size: 12px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 30%;
+		margin: 0 36%;
+	    margin-bottom: 20%;
+    }
+	
+}

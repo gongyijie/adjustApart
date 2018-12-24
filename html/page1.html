@@ -321,80 +321,17 @@
     </div>
     <div id="tel-modal" class="modal">
         <div class="telCo modal-contents">
-            <span class="code"><input type="text" id="code" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" /></span>
-            <span class="codeCheck"><a class="checkTel" type="button" id="telCode">获取验证码</a></span>
+            <div class="header_ms">
+                <span class="code">
+                    <input type="text" id="code" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" />
+                </span>
+                <span class="codeCheck">
+                    <a class="checkTel" type="button" id="telCode">获取验证码</a>
+                </span>
+            </div>
             <a class="checkTels" type="button" id="close-tel">确定</a>
         </div>
     </div>
-    <style>
-        .telCo{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            width: 33%;
-            max-width: 700px;
-            height: 26%;
-            max-height: 500px;
-            margin: 180px auto;
-            border-radius: 10px;
-            background-color: #fff;
-            -webkit-animation: zoom 0.6s;
-            animation: zoom 0.6s;
-            resize: both;
-            overflow: auto;
-            position: relative;
-        }
-        .modal-contents span{
-            display: inherit;
-            position: absolute;
-        }
-        .modal-contents .code{
-            top: 26%;
-            left: 10%;
-        }
-        .modal-contents .codeCheck{
-            top: 25.5%;
-            right: 10%;
-        }
-        .modal-contents input {
-            width: 240px;
-            text-align: center;
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgb(49, 181, 121);
-            color: rgb(18, 23, 55);
-            height: 40px;
-        }
-        .modal-contents a{
-            color: #fff;
-        }
-        .modal-contents .checkTel{
-            width: 120px;
-            height: 44px;
-            background-color: rgb(49, 181, 121);
-            border-radius: 4px;
-            padding-bottom: 0px;
-            padding-top: 11px;
-            font-size: 16px;
-            font-weight: normal;
-            padding-left: 17%;
-        }
-        .modal-contents .checkTels{
-            position: absolute;
-            width: 150px;
-            height: 48px;
-            background-color: rgb(49, 181, 121);
-            border-radius: 4px;
-            padding-bottom: 0px;
-            padding-top: 11px;
-            font-size: 18px;
-            font-weight: normal;
-            bottom: 15%;
-            right: 35%;
-            padding-left: 12%;
-            opacity: 0.6;
-        }
-    </style>
 <link rel="stylesheet" href="../assets/css/styles.css">
 <script src="../assets/js/jquery-3.3.1.js"></script>
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
