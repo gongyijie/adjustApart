@@ -48,7 +48,7 @@
         margin: 0 20%;
 	    margin-bottom: 8%;
     }
-.section_a550beab{position: relative;} .section_a550beab img{position: absolute; bottom: 0; right: 0;} .section_a550beab .closes{position: absolute;bottom: 20px;right: 8px;width: 60px;height: 60px;}
+.section_a550beab{position: relative;} .section_a550beab img{position: absolute;width:100% ; bottom: 0; right: 0; left: 0;} .section_a550beab .closes{position: absolute;bottom: 20px;right: 8px;width: 60px;height: 60px;}
 .cbsect_b547f460{padding-bottom: 100px; padding-top:  100px; background-color:  rgba(0, 0, 0, 0); }
 .cbdiv_304187f5{position:  absolute; z-index:  0; bottom: 0; right: 0; top: 0; left: 0; }
 .cbdiv_eecf3492{position:  relative; bottom:  0px; right:  0px; top:  0px; left:  0px; background-size: cover; background-position:  50% 50%; height:  100%; }
