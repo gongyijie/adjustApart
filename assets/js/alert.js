@@ -167,6 +167,7 @@ function subscribe(phone) {
 
 //发送后台
 function sendInformation() {
+    
     let phone = $.trim($("#telephone").val());
 
     var region    = validateRegion();   //提交前验证地区选择是否合法
@@ -178,7 +179,7 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-    $('.modal').css("display","none");
+    // $('.modal').css("display","none");
     //手机验证码
     $('#telCode').click(function () {
         sendSmsCode(phone);
