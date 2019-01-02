@@ -67,7 +67,7 @@ function showProject() {
  */
 function selectionLi(object){
     let region = $("#region-modal li.botton_area");
-    if (region.length >= 5){
+    if (region.length >= 5 && object.className != "botton_area" ){
         layer.alert("你只能订阅5个地区的调剂消息",function (index) {
             layer.close(index);
             showRegion();
