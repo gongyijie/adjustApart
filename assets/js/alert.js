@@ -182,7 +182,9 @@ function sendInformation() {
     // $('.modal').css("display","none");
     //手机验证码
     $('#telCode').click(function () {
-        sendSmsCode(phone);
+        if ($('#telCode').text() == "获取验证码"){
+            sendSmsCode(phone);
+        }
     });
 
     $('#close-tel').click(function () {
