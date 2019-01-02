@@ -19,11 +19,11 @@
             <div class="container c-container container_uRqtWz">
                 <div class="c-div div_tc3RsX yuanxiao">
                     <img class="c-image image_8EPkvh" src="../assets/img/nav_t.png">
-                    <div class="c-div div_z7kuKb">
+                    <!-- <div class="c-div div_z7kuKb">
                         <img class="c-image image_mpq38x c-action-click" src="../assets/img/search_t.png">
                         <img class="c-image image_cI1IPH c-action-click" src="../assets/img/ling_t.png">
                         <img class="c-image image_mU2QGG c-action-click" src="../assets/img/origin_t.png">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="c-div div_1CM85Q yuanxiao">
                     <div class="c-div div_s4Of3L">
@@ -35,15 +35,20 @@
                         <img class="c-image image_AUT48l" src="../assets/img/min_logo.png">
                     </div>
                     <div class="c-div div_s4Of3L second">
-                        <img class="c-image image_SvKhot zizhi" src="../assets/img/num_logo.png">
+                        <!-- <img class="c-image image_SvKhot zizhi" src="../assets/img/num_logo.png"> -->
+                        <div id="major_confirm"></div>
+                        <div id="major_follow"></div>
                         <div class="c-div div_6J47AU lianxi">
                             <div class="c-div div_1HJdCk lianxi">
                                 <img class="c-image image_t8wece" src="../assets/img/telephane.png">
                                 <h1 class="c-heading heading_f79RAi">88355456</h1>
                             </div>
-                            <div class="c-div div_1HJdCk lianxi">
+                            <div class="c-div div_1HJdCk lianxi hover" style="position: relative">
                                 <img class="c-image image_t8wece" src="../assets/img/wx.png">
-                                <h1 class="c-heading heading_f79RAi weixin" data-c_e_id="headingf3e83210">微信公众号</h1>
+                                <h1 class="c-heading heading_f79RAi weixin ">微信公众号</h1>
+                                <div class="c-div c-initHide div_ezcixLs">
+                                    <img class="c-image image_jrueg7" src="../assets/img/ewm.png">
+                                </div>
                             </div>
                             <div class="c-div div_1HJdCk lianxi">
                                 <img class="c-image image_t8wece" src="../assets/img/adress.png">
@@ -52,9 +57,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="c-div c-initHide div_ezcixL">
-                <img class="c-image image_jrueg7" src="../assets/img/ewm.png">
             </div>
         </div>
         <div class="container-fluid c-section section_ek17Ij links c-scrollIn" id="project">
@@ -208,7 +210,7 @@
                                         <img class="c-image image_t8wece" src="">
                                         <h1 class="c-heading heading_f79RAi weixin">如有疑问，请拨打客服</h1>
                                     </div>
-                                    <h1 class="c-heading heading_f79RAi shenqing">88355456</h1>
+                                    <h1 class="c-heading heading_f79RAi shenqing">010-56980320</h1>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +279,7 @@
                                     <a class="c-linkblock linkblock_Llk1VS" href="#"></a>
                                     <div class="c-div div_22zIGv links c-states"></div>
                                     <div class="c-div div_GsZLSu">
-                                        <h1 class="c-heading heading_LTuoru">MBA helper</h1>
+                                        <h1 class="c-heading heading_LTuoru">全国辅导机构</h1>
                                         <h1 class="c-heading heading_LTuoru fubiaoti">搜索平台</h1>
                                     </div>
                                 </div>
@@ -377,7 +379,7 @@
         </div>
   </div>
     <div id="tel-modal" class="modal">
-        <div class="telCo modal-contents">
+        <div class="telCo modal-contents modal-controller">
             <div class="header_ms">
                  <span class="code"><input type="text" id="code" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" /></span>
                 <span class="codeCheck"><a class="checkTel" type="button" id="telCode">获取验证码</a></span>
@@ -386,6 +388,21 @@
         </div>
     </div>
     <style>
+        #major_confirm,#major_follow{
+            display: flex;
+            flex-flow:  row nowrap;
+            justify-content: flex-start;
+            padding: 5px;
+        }
+        .div_ezcixLs{
+            display: none !important;
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+        }
+        .hover:hover .div_ezcixLs{
+            display: block !important;
+        }
     </style>
     <link rel="stylesheet" href="../assets/un_css/styles.css">
     <script src="../assets/js/jquery-3.3.1.js"></script>

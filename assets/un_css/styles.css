@@ -1,49 +1,53 @@
 @media all {
 	.header_ms{
-            display:flex;
-            justify-content:space-between;
-        }
-        .modal-contents .code{
-            margin: 13% 5% 4% 18%;
-        }
-        .modal-contents .codeCheck{
-            width: 150px;
-            margin: 14% 18% 4% 0;
-        }
-        .modal-contents input {
-        	width: 250px;
-            text-align: center;
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgb(49, 181, 121);
-            color: rgb(18, 23, 55);
-            height: 40px;
-        }
-        .modal-contents a{ 
-            color: #fff;
-        }
-        .modal-contents .checkTel{
-            height: 44px;
-            background-color: rgb(49, 181, 121);
-            border-radius: 4px;
-            padding-bottom: 0px;
-            padding: 11px;
-            font-size: 17px;
-            font-weight: normal;
-        }
-        .modal-contents .checkTels{
-            height: 48px;
-            background-color: rgb(49, 181, 121);
-            border-radius: 4px;
-            padding-bottom: 0px;
-            padding: 11px 12%;
-            font-size: 18px;
-            font-weight: normal;
-            opacity: 0.6;
-            width: 30%;
-    		margin: 0 36%;
-		    margin-bottom: 10%;
-        }
+        display:flex;
+        justify-content:space-between;
+    }
+    .modal-contents .code{
+        margin: 7% 5% 4% 20%;
+    }
+    .modal-contents .codeCheck{
+        width: 150px;
+        margin: 8% 12% 4% 0;
+    }
+    .modal-contents input {
+        width: 270px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(49, 181, 121);
+        color: rgb(18, 23, 55);
+        height: 40px;
+    }
+    .modal-contents a{ 
+        color: #fff;
+    }
+    .modal-contents .checkTel{
+        height: 44px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px;
+        font-size: 17px;
+        font-weight: normal;
+    }
+    .modal-contents .checkTels{
+        height: 48px;
+        background-color: rgb(49, 181, 121);
+        border-radius: 4px;
+        padding-bottom: 0px;
+        padding: 11px 27%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.6;
+        width: 62%;
+        margin: 0 20%;
+        margin-bottom: 8%;
+    }
+    .modal-controller {
+        height: 32%;
+        width: 45%;
+    }
 .cbsect_b547f460{padding-bottom: 100px; padding-top:  100px; background-color:  rgba(0, 0, 0, 0); }
 .cbdiv_304187f5{position:  absolute; z-index:  0; bottom: 0; right: 0; top: 0; left: 0; }
 .cbdiv_eecf3492{position:  relative; bottom:  0px; right:  0px; top:  0px; left:  0px; background-size: cover; background-position:  50% 50%; height:  100%; }
@@ -650,18 +654,22 @@
 }
 
 @media (max-width: 550px) {
-	.modal-contents {
-	    height: 22%;
-	}
-	.modal-contents .code{
-        margin: 21% 5% 4% 4%;
+	.modal-controller {
+        height: 29% !important;
+        width: 75%;
+    }
+    .modal-contents {
+        height: 37%;
+    }
+    .modal-contents .code{
+        margin:20% 0% 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 80px;
-        margin: 24% 0 4% 0;
+        margin: 22% 21px 0% 0px;
     }
     .modal-contents input {
-    	width: 95px;
+        width: 162px;
         text-align: center;
         border-style: solid;
         border-width: 1px;
@@ -674,7 +682,7 @@
         background-color: rgb(49, 181, 121);
         border-radius: 4px;
         padding-bottom: 0px;
-        padding: 13px;
+        padding: 10px;
         font-size: 10px;
         font-weight: normal;
     }
@@ -683,21 +691,25 @@
         background-color: rgb(49, 181, 121);
         border-radius: 4px;
         padding-bottom: 0px;
-        padding: 6px 8%;
+        padding: 6px 36%;
         font-size: 12px;
         font-weight: normal;
         opacity: 0.6;
-        width: 30%;
-		margin: 0 36%;
-	    margin-bottom: 7%;
+        width: 80%;
+        margin: 0 10%;
+        margin-bottom: 19%;
     }
 	
 }
 @media (max-width: 400px) {
-	.modal-contents {
-	    height: 28%;
-	}
-	.modal-contents .code{
+	.modal-controller {
+        height: 32% !important;
+        width: 80%;
+    }
+    .modal-contents {
+        height: 41%;
+    }
+    .modal-contents .code{
         margin: 21% 5% 4% 4%;
     }
     .modal-contents .codeCheck{
@@ -705,20 +717,20 @@
         margin: 24% 0 4% 0;
     }
     .modal-contents input {
-    	width: 95px;
+        width: 157px;
         text-align: center;
         border-style: solid;
         border-width: 1px;
         border-color: rgb(49, 181, 121);
         color: rgb(18, 23, 55);
-        height: 30px;
+        height: 35px;
     }
     .modal-contents .checkTel{
         height: 44px;
         background-color: rgb(49, 181, 121);
         border-radius: 4px;
         padding-bottom: 0px;
-        padding: 8px;
+        padding: 11px;
         font-size: 10px;
         font-weight: normal;
     }
@@ -727,13 +739,13 @@
         background-color: rgb(49, 181, 121);
         border-radius: 4px;
         padding-bottom: 0px;
-        padding: 10px 8%;
+        padding: 10px 40%;
         font-size: 12px;
         font-weight: normal;
         opacity: 0.6;
-        width: 30%;
-		margin: 0 36%;
-	    margin-bottom: 20%;
+        width: 91%;
+        margin: 0px 4%;
+        margin-bottom: 12%;
     }
 	
 }

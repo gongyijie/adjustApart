@@ -126,7 +126,7 @@ function subscribe(phone) {
         "phone"  : phone,
         "grade"  : 0
     }, function(data){
-        layer.alert("订阅成功");
+        layer.alert("订阅成功！MBA Helper将以短信形式及时推送您订阅范围内的调剂专题，请注意查收。");
         $('#tel-modal').css("display","none");
     });
 }

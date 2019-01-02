@@ -47,6 +47,7 @@ function countDown(id, time){
     tempTag.text('60');
     tempTag.css('opacity','0.6');
     tempTag.css('paddingLeft','42%');
+    tempTag.css('paddingRight','42%');
     var flag = true;
     if (flag) {
         flag = false;
@@ -59,6 +60,7 @@ function countDown(id, time){
                 tempTag.removeClass('disable');
                 tempTag.css('opacity','1');
                 tempTag.css('paddingLeft','22%');
+                tempTag.css('paddingRight','22%');
                 flag = true;
             }
         }, 1000)
