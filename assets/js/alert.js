@@ -66,11 +66,20 @@ function showProject() {
  * @param object
  */
 function selectionLi(object){
-    if(object.className == "botton_area"){
-        object.classList.remove("botton_area");
-    }else{
-        object.classList.add("botton_area");
+    let region = $("#region-modal li.botton_area");
+    if (region.length >= 5){
+        layer.alert("你只能订阅5个地区的调剂消息",function (index) {
+            layer.close(index);
+            showRegion();
+        });
+    }else {
+        if(object.className == "botton_area"){
+            object.classList.remove("botton_area");
+        }else{
+            object.classList.add("botton_area");
+        }
     }
+
 }
 
 //验证用户选择的地区是否合法
@@ -78,8 +87,8 @@ function validateRegion() {
     let compelte_region;
     let region = $("#region-modal li.botton_area");
     let region_length = region.length;
-    if(region_length > 3){
-        layer.alert("你只能选择3个地区",function (index) {
+    if(region_length > 5){
+        layer.alert("你只能选择5个地区",function (index) {
             layer.close(index);
             showRegion();
         });
