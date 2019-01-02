@@ -41,11 +41,11 @@
                         <div class="c-div div_6J47AU lianxi">
                             <div class="c-div div_1HJdCk lianxi">
                                 <img class="c-image image_t8wece" src="../assets/img/telephane.png">
-                                <h1 class="c-heading heading_f79RAi">88355456</h1>
+                                <h1 class="c-heading heading_f79RAi" id="telephone"></h1>
                             </div>
                             <div class="c-div div_1HJdCk lianxi hover" style="position: relative">
                                 <img class="c-image image_t8wece" src="../assets/img/wx.png">
-                                <h1 class="c-heading heading_f79RAi weixin ">微信公众号</h1>
+                                <h1 class="c-heading heading_f79RAi weixin">微信公众号</h1>
                                 <div class="c-div c-initHide div_ezcixLs">
                                     <img class="c-image image_jrueg7" id="wc_image" src="#" alt="">
                                 </div>
@@ -248,8 +248,8 @@
                                 <div class="c-div div_6J47AU links c-state" onmouseover="changes(1)" onmouseout="remove(1)"> 
                                     <a class="c-linkblock linkblock_Llk1VS" href="#"></a>
                                     <div class="c-div div_22zIGv links c-states"></div>
-                                    <div class="c-div div_GsZLSu">
-                                        <h1 class="c-heading heading_LTuoru">中心网站</h1>
+                                    <div class="c-div div_GsZLSu div_GsZLSus">
+                                        <h1 class="c-heading heading_LTuoru"><a id="index_web" href="#">中心网站</a></h1>
                                         <h1 class="c-heading heading_LTuoru fubiaoti">项目官网</h1>
                                     </div>
                                 </div>
@@ -259,7 +259,7 @@
                                     <a class="c-linkblock linkblock_Llk1VS" href="#"></a>
                                     <div class="c-div div_22zIGv links c-states"></div>
                                     <div class="c-div div_GsZLSu">
-                                        <h1 class="c-heading heading_LTuoru">校研究生院官网</h1>
+                                        <h1 class="c-heading heading_LTuoru"><a id="pg_index_web" href="#">校研究生院官网</a></h1>
                                         <h1 class="c-heading heading_LTuoru fubiaoti">研究生院</h1>
                                     </div>
                                 </div>
@@ -392,7 +392,10 @@
             display: flex;
             flex-flow:  row nowrap;
             justify-content: flex-start;
-            padding: 5px;
+            padding: 0 10px;
+        }
+        #major_confirm img,#major_follow img{
+            padding: 5px 5px;
         }
         .div_ezcixLs{
             display: none !important;
@@ -402,6 +405,12 @@
         }
         .hover:hover .div_ezcixLs{
             display: block !important;
+        }
+        .div_GsZLSu h1 a{
+            color: #000;
+        }
+        .div_GsZLSus h1:hover a{
+            color: #fff !important;
         }
     </style>
     <link rel="stylesheet" href="../assets/un_css/styles.css">

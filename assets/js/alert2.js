@@ -1,6 +1,9 @@
 var majorName;
 $(function(){
-	getCurrentMajorMsg(1);
+	// request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
+	// 	getCurrentMajorMsg(data.majorId);
+ //    });
+getCurrentMajorMsg(1);
 });
 
 /**
@@ -58,17 +61,20 @@ function sendInformation() {
 function setInfo(data){
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
+	$('telephone').text(data.telephone);
 	$('#major_logo').attr("src",data.major_logo);
 	$('#wc_image').attr("src",data.wc_image);
 	$('#address').text(data.address);
+	$('index_web').attr("href",data.index_web);
+	$('pg_index_web').attr("href",data.pg_index_web);
 	addProjectTag(data.project);
 	addImg(data.major_confirm_id, data.major_follow_id);
 	this.mode = data.mode;
 
 	if (data.mode == 0) {
-		$('#download').href(data.online_application);
+		$('#download').attr("href",data.online_application);
 	}else if (this.mode == 1) {
-		$('#download').href(data.file_download);
+		$('#download').attr("href",data.file_download);
 	};
 
 }
