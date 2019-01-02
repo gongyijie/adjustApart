@@ -1,9 +1,9 @@
 var majorName;
 $(function(){
-	// request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
-	// 	getCurrentMajorMsg(data.majorId);
- //    });
-getCurrentMajorMsg(1);
+	request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
+		getCurrentMajorMsg(data.majorId);
+    });
+	// getCurrentMajorMsg(1);
 });
 
 /**
@@ -28,6 +28,7 @@ function subscribe(phone) {
     }, function(data){
         layer.alert("订阅成功");
         $('#tel-modal').css("display","none");
+        $('.modal').css("display","none");
     });
 }
 
