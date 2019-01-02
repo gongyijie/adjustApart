@@ -62,7 +62,7 @@ function setInfo(data){
 	$('#wc_image').attr("src",data.wc_image);
 	$('#address').text(data.address);
 	addProjectTag(data.project);
-	addImg(data.major_confirm, data.major_follow);
+	addImg(data.major_confirm_id, data.major_follow_id);
 	this.mode = data.mode;
 
 	if (data.mode == 0) {
