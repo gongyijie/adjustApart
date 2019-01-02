@@ -59,9 +59,18 @@ function setInfo(data){
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
 	$('#major_logo').attr("src",data.major_logo);
+	$('#wc_image').attr("src",data.wc_image);
 	$('#address').text(data.address);
 	addProjectTag(data.project);
 	addImg(data.major_confirm, data.major_follow);
+	this.mode = data.mode;
+
+	if (data.mode == 0) {
+		$('#download').href(data.online_application);
+	}else if (this.mode == 1) {
+		$('#download').href(data.file_download);
+	};
+
 }
 
 /*
