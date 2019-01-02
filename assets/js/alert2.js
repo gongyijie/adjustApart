@@ -60,6 +60,7 @@ function sendInformation() {
  * data 信息
  */
 function setInfo(data){
+    
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
 	$('#telephone').text(data.telephone);
