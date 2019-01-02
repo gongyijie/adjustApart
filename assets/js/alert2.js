@@ -1,9 +1,9 @@
 var majorName;
 $(function(){
-	request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
-		getCurrentMajorMsg(data.majorId);
-    });
-	// getCurrentMajorMsg(1);
+	// request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
+	// 	getCurrentMajorMsg(data.majorId);
+ //    });
+	getCurrentMajorMsg(1);
 });
 
 /**

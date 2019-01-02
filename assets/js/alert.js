@@ -48,9 +48,6 @@ function showRegion(){
     $('#close-region').click(function () {
         region_modal.css("display","none");
     });
-    $('.modal').click(function () {
-        region_modal.css("display","none");
-    });
 }
 
  //显示项目模态框
@@ -60,9 +57,6 @@ function showProject() {
 
     $('#close-project').click(function () {
         project_modal.css("display","none");
-    });
-    $('.modal').click(function () {
-        region_modal.css("display","none");
     });
 }
 
@@ -161,7 +155,7 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-    $('.modal').css("display","none");
+
     //手机验证码
     $('#telCode').click(function () {
         sendSmsCode(phone);
