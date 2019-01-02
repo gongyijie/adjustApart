@@ -85,6 +85,7 @@ function validateRegion() {
         });
         return false;
     }
+    saveRegion = [];
     for(var i = 0; i < region_length; i++){     //把地区名字存入数组
         saveRegion[i] = region[i].innerHTML;
     }
@@ -106,6 +107,7 @@ function validateProject() {
         });
         return false;
     }
+    saveProject = [];
     for(let i = 0; i < project_length; i++){      //把项目名字存入数组
         saveProject[i] = project[i].innerHTML;
     }
