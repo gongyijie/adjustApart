@@ -9,6 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="../assets/img/mba_logo.jpeg" type="image/x-icon" />
 </head>
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/global_main.css">
@@ -16,12 +17,12 @@
 <link rel="stylesheet" href="../assets/css/alert.css">
 <body>
 	<div class="body_wYhlab">
-        <div class="container-fluid hidden-xs c-section section_AsGpeg c-action-click" id="section_a550beab">
-            <div class="section_a550beab">
-                <img class="c-image image_RVuXi1" src="../assets/img/argument.png">
-                <div class="closes" onclick="argument()"></div>
-            </div>
-        </div>
+        <!--<div class="container-fluid hidden-xs c-section section_AsGpeg c-action-click" id="section_a550beab">-->
+            <!--<div class="section_a550beab">-->
+                <!--<img class="c-image image_RVuXi1" src="../assets/img/argument.png">-->
+                <!--<div class="closes" onclick="argument()"></div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="container-fluid c-section section_lqnCLc" id="section_619f37a8">
             <div class="container c-container container_uRqtWz">
                 <div class="c-div div_tc3RsX">
@@ -79,7 +80,7 @@
                         <h1 class="c-heading heading_r65E6g">分数线要求</h1>
                         <h1 class="c-heading heading_bgErib">参考研招工作规定第62条第2项</h1>
                         <div class="textblock_L60QcJ">
-                            <p>初试成绩符合第一志愿报考专业在调入地区的全国初试成绩基本要求。近三年国家A\B线展示</p>
+                            <p>初试成绩符合第一志愿报考专业在调入地区的全国初试成绩基本要求。</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
                     <h1 class="c-heading heading_oCc1YX white">你需要了解的</h1>
                     <h1 class="c-heading heading_RFblVD white">宏观调剂三阶段</h1>
                     <div class="c-div div_c0BzRm"></div>
-                    <h1 class="c-heading heading_oBRVil">从考试结束到研招网调剂系统关系</h1>
+                    <h1 class="c-heading heading_oBRVil">从考试结束到研招网调剂系统关闭</h1>
                 </div>
                 <div class="c-div div_GqwLLI">
                     <img class="hidden-xs c-image image_XAbQby" src="../assets/img/origin_max.png">
@@ -157,9 +158,9 @@
                             <div class="c-div div_c0BzRm"></div>
                         </div>
                         <div class="c-div div_9zJDdG">
-                            <input class="c-input input_CZk4gE area" name="input1" placeholder="选择地区" id="region-text" type="text" onfocus="showRegion()">
-                            <input class="c-input input_CZk4gE project" name="input1" placeholder="选择项目" id="project-text" type="text" onfocus="showProject()">
-                            <input class="c-input input_CZk4gE telephane" name="input1" id="telephone" placeholder="填写手机号" type="text">
+                            <input class="c-input input_CZk4gE area" name="input1" autocomplete="off" placeholder="选择地区" id="region-text" type="text" onfocus="showRegion()">
+                            <input class="c-input input_CZk4gE project" name="input1" autocomplete="off" placeholder="选择项目" id="project-text" type="text" onfocus="showProject()">
+                            <input class="c-input input_CZk4gE telephane" name="input1" autocomplete="off"  id="telephone" placeholder="填写手机号" type="text">
                             <a class="btn c-button button_9dk3VD" type="button" onclick="sendInformation()">开始订阅</a>
                             <h1 class="c-heading heading_oBRVil blue dingyue">4月30日我们将停止调剂信息推送服务，
                                 <br>您也可以随时电话联络我们取消订阅。
@@ -323,7 +324,7 @@
         <div class="telCo modal-contents modal-controller">
             <div class="header_ms">
                 <span class="code">
-                    <input type="text" id="code" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" />
+                    <input  type="text" id="code"  oninput="OnInput (event)" autocomplete="off" onpropertychange="OnPropChanged (event)" />
                 </span>
                 <span class="codeCheck">
                     <a class="checkTel" type="button" id="telCode">获取验证码</a>
