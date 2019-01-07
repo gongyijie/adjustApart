@@ -82,8 +82,8 @@ function selectionLi(object){
         }
     }else {
         let region = $("#project-modal li.botton_area");
-        if (region.length >= 2 && object.className != "botton_area" ){
-            layer.alert("你只能订阅2个项目",function (index) {
+        if (region.length >= 3 && object.className != "botton_area" ){
+            layer.alert("你只能订阅3个项目",function (index) {
                 layer.close(index);
                 showProject();
             });

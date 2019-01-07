@@ -715,7 +715,7 @@
         width: 75%;
     }
 	.modal-contents {
-	    height: 37%;
+	    height: 250px;;
 	}
 	.modal-contents .code{
         margin:20% 0% 4% 11%;
@@ -763,7 +763,7 @@
         width: 80%;
     }
 	.modal-contents {
-        height: 41%;
+        height: 256px;
 	}
 	.modal-contents .code{
         margin: 21% 5% 4% 4%;
