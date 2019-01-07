@@ -80,6 +80,7 @@ function setInfo(data){
     
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
+	$('#title').html('2019'+data.major_name+'调剂招生');
 	$('#telephone').text(data.telephone);
 	$('#major_logo').attr("src",data.major_logo);
 	$('#major_icon_logo').attr("href",data.major_logo);
@@ -89,12 +90,11 @@ function setInfo(data){
 	$('#pg_index_web').attr("href",data.pg_index_web);
 	addProjectTag(data.project);
 	addImg(data.major_confirm_id, data.major_follow_id);
-	this.mode = data.mode;
-
 	if (data.mode == 0) {
 		$('#download').attr("href",data.online_application);
 		$('#download').text('调剂系统');
-	}else if (this.mode == 1) {
+		$('#download').attr("style","background-image:url(../assets/img/bottom_a.png)");
+	}else if (data.mode == 1) {
 		$('#download').attr("href",data.file_download);
 	};
 
