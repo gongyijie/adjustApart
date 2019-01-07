@@ -655,7 +655,7 @@
 
 @media (max-width: 550px) {
 	.modal-controller {
-        height: 29% !important;
+        height: 228px !important;
         width: 75%;
     }
     .modal-contents {
@@ -703,7 +703,7 @@
 }
 @media (max-width: 400px) {
 	.modal-controller {
-        height: 32% !important;
+        height: 214px !important;
         width: 80%;
     }
     .modal-contents {

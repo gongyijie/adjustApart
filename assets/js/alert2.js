@@ -1,9 +1,26 @@
 var majorName;
+
+(function($) {
+    var re = /([^&=]+)=?([^&]*)/g,
+        decodeRE = /\+/g,
+        decode = function (str) { return decodeURIComponent( str.replace(decodeRE, " ") ); };
+    $.parseParams = function(query) {
+        let params = {}, e;
+
+        while ( e = re.exec(query) ) params[ decode(e[1]) ] = decode( e[2] );
+        return params;
+    };
+})(jQuery);
+
+
 $(function(){
-	// request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
-	// 	getCurrentMajorMsg(data.majorId);
- //    });
-	getCurrentMajorMsg(1);
+    // request('get', 'www.lishanlei.cn/admin/dispen/getCurrentMajorMsg', function(data){
+		// getCurrentMajorMsg(data.majorId);
+    // });
+    var url =  window.location.href;
+    var  param = $.parseParams(url.split('?')[1] || ''); // 解析问号后的 url 参数
+    
+	getCurrentMajorMsg(param.majorId);
 });
 
 /**
@@ -75,6 +92,7 @@ function setInfo(data){
 
 	if (data.mode == 0) {
 		$('#download').attr("href",data.online_application);
+		$('#download').text('调剂系统');
 	}else if (this.mode == 1) {
 		$('#download').attr("href",data.file_download);
 	};

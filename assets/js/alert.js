@@ -16,7 +16,7 @@ function addTag(data, id, length){
     var content = "";
     var count   = data.length;
     $.each(data, function (index, value) {
-        content += "<li onclick='selectionLi(this)'>" + value + "</li>";
+        content += "<li onclick='selectionLi(this)' tname='"+id+"'>" + value + "</li>";
         if((index+1) % length == 0 || (index+1) == count){
             content = "<ul>" + content + "</ul>"
             $(id).append(content);
@@ -66,19 +66,36 @@ function showProject() {
  * @param object
  */
 function selectionLi(object){
-    let region = $("#region-modal li.botton_area");
-    if (region.length >= 5 && object.className != "botton_area" ){
-        layer.alert("你只能订阅5个地区的调剂消息",function (index) {
-            layer.close(index);
-            showRegion();
-        });
+    if ($(object).attr("tname") == "#provinces"){
+        let region = $("#region-modal li.botton_area");
+        if (region.length >= 5 && object.className != "botton_area" ){
+            layer.alert("你只能订阅5个地区的调剂消息",function (index) {
+                layer.close(index);
+                showRegion();
+            });
+        }else {
+            if(object.className == "botton_area"){
+                object.classList.remove("botton_area");
+            }else{
+                object.classList.add("botton_area");
+            }
+        }
     }else {
-        if(object.className == "botton_area"){
-            object.classList.remove("botton_area");
-        }else{
-            object.classList.add("botton_area");
+        let region = $("#project-modal li.botton_area");
+        if (region.length >= 2 && object.className != "botton_area" ){
+            layer.alert("你只能订阅2个项目",function (index) {
+                layer.close(index);
+                showProject();
+            });
+        }else {
+            if(object.className == "botton_area"){
+                object.classList.remove("botton_area");
+            }else{
+                object.classList.add("botton_area");
+            }
         }
     }
+
 
 }
 
@@ -144,6 +161,7 @@ function subscribe(phone) {
 
 //发送后台
 function sendInformation() {
+    
     let phone = $.trim($("#telephone").val());
 
     var region    = validateRegion();   //提交前验证地区选择是否合法
@@ -155,10 +173,11 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-
     //手机验证码
     $('#telCode').click(function () {
-        sendSmsCode(phone);
+        if ($('#telCode').text() == "获取验证码"){
+            sendSmsCode(phone);
+        }
     });
 
     $('#close-tel').click(function () {
