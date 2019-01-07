@@ -126,8 +126,8 @@ function validateProject() {
     let complete_project;
     let project = $("#project-modal li.botton_area");
     let project_length = project.length;
-    if(project_length > 2){
-        layer.alert("你只能选择2个项目",function (index) {
+    if(project_length > 3){
+        layer.alert("你只能选择3个项目",function (index) {
             layer.close(index);
             showProject();
         });
