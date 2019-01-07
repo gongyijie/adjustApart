@@ -154,7 +154,11 @@ function subscribe(phone) {
         "phone"  : phone,
         "grade"  : 0
     }, function(data){
-        layer.alert("订阅成功！MBA Helper将以短信形式及时推送您订阅范围内的调剂专题，请注意查收。");
+        layer.alert("订阅成功！MBA Helper将以短信形式及时推送您订阅范围内的调剂专题，请注意查收。" , function (index) {
+            layer.close(index);
+            initRegionAndProject();
+        });
+
         $('#tel-modal').css("display","none");
     });
 }
@@ -173,9 +177,10 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
+    // $('#tel-modal').fadeIn();
     //手机验证码
     $('#telCode').click(function () {
-        if ($('#telCode').text() == "获取验证码"){
+        if ($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取" ){
             sendSmsCode(phone);
         }
     });
@@ -184,4 +189,25 @@ function sendInformation() {
         var code = $.trim($("#code").val());
         judgeSms(phone, code, subscribe);
     });
+}
+function initRegionAndProject() {
+
+    //清空选项
+    let regions = $("#region-modal li.botton_area");
+    let projects = $("#project-modal li.botton_area");
+
+    var i = 0;
+    for (i = 0 ; i < regions.length ; i ++ ){
+        regions[i].classList.remove("botton_area");
+    }
+    i = 0;
+    for (i = 0 ; i < projects.length ; i ++ ){
+        projects[i] . classList.remove("botton_area");
+    }
+
+    // 清空input
+    $("#project-text").attr("value","");
+    $("#region-text").attr("value","");
+    $("#telephone").val("");
+
 }
