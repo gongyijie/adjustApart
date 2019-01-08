@@ -36,7 +36,7 @@ function getProvinces(){
 //获取项目
 function getDisPro(){
     request('get', '/admin/dispen/getDisPro', {}, function(data){
-        addTag(data, "#dispro", 6);
+        addTag(data, "#dispro", 5);
     });
 }
 
@@ -187,7 +187,7 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-    
+
     $('#imgClosess').click(function () {
          $('#tel-modal').css("display","none");
     });

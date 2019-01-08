@@ -376,8 +376,8 @@
 .areas{width: 723px;height: 428px;background-color: #ffffff;border-radius: 10px;border: solid 2px #31b579; margin: 10% auto;}
 .area-part{padding: 0 39% 3% 39%;margin-left: auto;margin-right: auto;}
 .cont{width: 90%;margin: 0 auto;}
-.cont ul{display:  -webkit-box; display:  -ms-flexbox; display:  flex; -webkit-box-pack:  start; -ms-flex-pack:  start; justify-content:  flex-start; -webkit-box-align:  center; -ms-flex-align:  center; align-items:  center; -webkit-box-orient:  horizontal; -webkit-box-direction:  column; -ms-flex-flow:  row-column nowrap; flex-flow:  row-column nowrap; min-height: auto; margin: 0;padding: 0;}
-.cont ul li{list-style: none; font-family: MicrosoftYaHei;font-size: 16px;font-weight: normal;letter-spacing: 0px;color: #6f6f6f;margin-left: 5%;margin-bottom: 2%;}
+.cont ul{display:  -webkit-box; display:  -ms-flexbox; display:  flex; -webkit-box-pack:  start; -ms-flex-pack:  start; justify-content:  flex-start; -webkit-box-align:  center; -ms-flex-align:  center; align-items:  center; -webkit-box-orient:  horizontal; -webkit-box-direction:  column; -ms-flex-flow:  row-column nowrap; flex-flow:  row-column nowrap; min-height: auto; margin: 0;padding: 0; flex-wrap: nowrap;}
+.cont ul li{background-color: #31b579;border-radius: 15px;color: #fff;padding: 2px 7px;list-style: none; font-family: MicrosoftYaHei;font-size: 16px;font-weight: normal;letter-spacing: 0px;margin-left: 8%;margin-bottom: 2%;}
 .cont ul .botton_areas {
     width: 90px;
     height: 29px;
@@ -385,6 +385,10 @@
     border-radius: 15px;
     color: #fff;
     padding: 2px 9px;
+}
+.cout ul{
+    width: 100%;
+    margin: 0 auto;
 }
 .cont ul .botton_areas::after {
     content: "";
@@ -396,8 +400,8 @@
     background: url(../img/dh.png) no-repeat center;
     background-size: 100%;
 }
-.cont ul .botton_area{width: 86px;height: 29px;background-color: #31b579;border-radius: 15px;color: #fff;padding: 2px 7px;}
-.cont ul .botton_area::after{ content: ""; display: inline-block; width: 14px; height: 10px; margin-left: 5px; vertical-align: middle; background: url("../img/dh.png") no-repeat center; background-size: 100%;}
+.cont ul .botton_area{background: #fff;color: #6f6f6f;}
+/*.cont ul .botton_area::after{ content: ""; display: inline-block; width: 14px; height: 10px; margin-left: 5px; vertical-align: middle; background: url("../img/dh.png") no-repeat center; background-size: 100%;}*/
 .areaBtn{margin: 1% 0 0 33%;}
 } 
 @media (max-width: 1240px) {
