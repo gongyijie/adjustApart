@@ -111,6 +111,7 @@ function validateRegion() {
     let compelte_region;
     let region = $("#region-modal li.botton_area");
     let region_length = region.length;
+
     if(region_length > 5){
         layer.alert("你只能选择5个地区",function (index) {
             layer.close(index);
@@ -172,19 +173,20 @@ function subscribe(phone) {
 
 //发送后台
 function sendInformation() {
-    
     let phone = $.trim($("#telephone").val());
-
     var region    = validateRegion();   //提交前验证地区选择是否合法
     var project   = validateProject();  //提交前验证项目选择是否合法
+    if (this.saveRegion.length==0 || this.saveProject.length == 0) {
+        layer.alert("请选择至少一个地区和项目！");
+        return false;
+    };
     var telephone = validatetelephone(phone);//提交前验证手机号
-
+    
     if(!telephone || !region || !project){
         return false;
     }
 
     $('#tel-modal').css("display","block");
-    // $('#tel-modal').fadeIn();
     //手机验证码
     $('#telCode').click(function () {
         if ($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取" ){

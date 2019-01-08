@@ -59,8 +59,8 @@ function countDown(id, time){
                 tempTag.text('重新获取');
                 tempTag.removeClass('disable');
                 tempTag.css('opacity','1');
-                tempTag.css('paddingLeft','22%');
-                tempTag.css('paddingRight','22%');
+                tempTag.css('paddingLeft','20%');
+                tempTag.css('paddingRight','20%');
                 flag = true;
             }
         }, 1000)

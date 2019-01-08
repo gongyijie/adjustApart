@@ -8,7 +8,7 @@
     }
     .modal-contents .codeCheck{
         width: 150px;
-        margin: 8% 12% 4% 0;
+        margin: 8% 14% 4% 0;
     }
     .modal-contents input {
         width: 270px;
@@ -45,7 +45,7 @@
         margin-bottom: 8%;
     }
     .modal-controller {
-        height: 32%;
+        height: 200px;
         width: 45%;
     }
 .cbsect_b547f460{padding-bottom: 100px; padding-top:  100px; background-color:  rgba(0, 0, 0, 0); }
