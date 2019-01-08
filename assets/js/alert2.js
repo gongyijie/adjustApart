@@ -60,7 +60,9 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-
+    $('#imgClosess').click(function () {
+         $('#tel-modal').css("display","none");
+    });
     //手机验证码
     $('#telCode').click(function () {
         sendSmsCode(phone);
@@ -77,7 +79,6 @@ function sendInformation() {
  * data 信息
  */
 function setInfo(data){
-    
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
 	$('#title').html('2019'+data.major_name+'调剂招生');
@@ -92,10 +93,12 @@ function setInfo(data){
 	addImg(data.major_confirm_id, data.major_follow_id);
 	if (data.mode == 0) {
 		$('#download').attr("href",data.online_application);
-		$('#download').text('调剂系统');
+		$('#download').text('去申请');
 		$('#download').attr("style","background-image:url(../assets/img/bottom_a.png)");
+		$('#informations').html(data.mode_intro);
 	}else if (data.mode == 1) {
 		$('#download').attr("href",data.file_download);
+		$('#informations').html(data.mode_intro);
 	};
 
 }

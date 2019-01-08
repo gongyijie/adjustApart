@@ -29,14 +29,14 @@ function addTag(data, id, length){
 //获取省份
 function getProvinces(){
     request('get', '/admin/dispen/getProvinces', {}, function(data){
-        addTag(data, "#provinces", 8);
+        addTag(data, "#provinces", 6);
     });
 }
 
 //获取项目
 function getDisPro(){
     request('get', '/admin/dispen/getDisPro', {}, function(data){
-        addTag(data, "#dispro", 4);
+        addTag(data, "#dispro", 5);
     });
 }
 
@@ -48,6 +48,10 @@ function showRegion(){
     $('#close-region').click(function () {
         region_modal.css("display","none");
     });
+
+    $('#imgClose').click(function () {
+        region_modal.css("display","none");
+    });
 }
 
  //显示项目模态框
@@ -56,6 +60,9 @@ function showProject() {
     project_modal.css("display","block");
 
     $('#close-project').click(function () {
+        project_modal.css("display","none");
+    });
+    $('#imgCloses').click(function () {
         project_modal.css("display","none");
     });
 }
@@ -104,6 +111,7 @@ function validateRegion() {
     let compelte_region;
     let region = $("#region-modal li.botton_area");
     let region_length = region.length;
+
     if(region_length > 5){
         layer.alert("你只能选择5个地区",function (index) {
             layer.close(index);
@@ -154,7 +162,7 @@ function subscribe(phone) {
         "phone"  : phone,
         "grade"  : 0
     }, function(data){
-        layer.alert("订阅成功！MBA Helper将以短信形式及时推送您订阅范围内的调剂专题，请注意查收。" , function (index) {
+        layer.alert("订阅成功！MBA Helper将以短信形式及时推送您订阅范围内的调剂专题，请注意查收。祝您金榜题名！" , function (index) {
             layer.close(index);
             initRegionAndProject();
         });
@@ -165,19 +173,24 @@ function subscribe(phone) {
 
 //发送后台
 function sendInformation() {
-    
     let phone = $.trim($("#telephone").val());
-
     var region    = validateRegion();   //提交前验证地区选择是否合法
     var project   = validateProject();  //提交前验证项目选择是否合法
+    if (this.saveRegion.length==0 || this.saveProject.length == 0) {
+        layer.alert("请选择至少一个地区和项目！");
+        return false;
+    };
     var telephone = validatetelephone(phone);//提交前验证手机号
-
+    
     if(!telephone || !region || !project){
         return false;
     }
 
     $('#tel-modal').css("display","block");
-    // $('#tel-modal').fadeIn();
+
+    $('#imgClosess').click(function () {
+         $('#tel-modal').css("display","none");
+    });
     //手机验证码
     $('#telCode').click(function () {
         if ($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取" ){

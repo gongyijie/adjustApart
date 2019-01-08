@@ -4,11 +4,11 @@
         justify-content:space-between;
     }
     .modal-contents .code{
-        margin: 7% 5% 4% 20%;
+        margin: 8% 5% 4% 20%;
     }
     .modal-contents .codeCheck{
         width: 150px;
-        margin: 8% 12% 4% 0;
+        margin: 9.5% 14% 4% 0;
     }
     .modal-contents input {
         width: 270px;
@@ -17,17 +17,17 @@
         border-width: 1px;
         border-color: rgb(49, 181, 121);
         color: rgb(18, 23, 55);
-        height: 40px;
+        height: 48px;
     }
     .modal-contents a{ 
         color: #fff;
     }
     .modal-contents .checkTel{
-        height: 44px;
+        height: 48px;
         background-color: rgb(49, 181, 121);
         border-radius: 4px;
         padding-bottom: 0px;
-        padding: 11px;
+        padding: 14px;
         font-size: 17px;
         font-weight: normal;
     }
@@ -45,7 +45,7 @@
         margin-bottom: 8%;
     }
     .modal-controller {
-        height: 32%;
+        height: 246px;
         width: 45%;
     }
 .cbsect_b547f460{padding-bottom: 100px; padding-top:  100px; background-color:  rgba(0, 0, 0, 0); }
@@ -366,6 +366,12 @@
     background: rgba(18, 23, 55, 0.9);
 }
 } 
+@media (min-width: 1000px){
+   #major_logo{
+        width: 139.2px;
+    } 
+}
+
 @media (max-width: 1240px) {
 	.modal-contents .code{
         margin: 18% 5% 4% 18%;

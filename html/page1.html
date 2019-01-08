@@ -41,7 +41,7 @@
                     <div class="c-div div_6J47AU">
                         <div class="c-div div_22zIGv"></div>
                         <p class="c-paragraph paragraph_LKZQZM">订阅地区调剂动态，不放过任何成功机会，
-                        <br>MBA helper为你的调剂保驾护航！
+                        <br>MBA Helper为你的调剂保驾护航！
                         </p>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                 <div class="row c-row row_v3umjD">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 c-column column_mzDP4q">
                         <div class="c-div div_6J47AU links c-state" onmouseover="change(0)" onmouseout="remove(0)">
-                            <a class="c-linkblock linkblock_Llk1VS" href="https://yz.chsi.com.cn/"></a>
+                            <a target="_Blank" class="c-linkblock linkblock_Llk1VS" href="https://yz.chsi.com.cn/"></a>
                             <div class="c-div div_22zIGv links c-states"></div>
                             <div class="c-div div_GsZLSu">
                                 <h1 class="c-heading heading_LTuoru">研招网</h1>
@@ -194,7 +194,7 @@
                             </div>
                         </div>
                         <div class="c-div div_6J47AU links c-state" onmouseover="change(1)" onmouseout="remove(1)">
-                            <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/GhvHT0MOjyo8c9l6xBQecQ"></a>
+                            <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/GhvHT0MOjyo8c9l6xBQecQ" target="_Blank"></a>
                             <div class="c-div div_22zIGv links c-states"></div>
                             <div class="c-div div_GsZLSu">
                                 <h1 class="c-heading heading_LTuoru" >研招管理规定</h1>
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                         <div class="c-div div_6J47AU links c-state" onmouseover="change(2)" onmouseout="remove(2)">
-                            <a class="c-linkblock linkblock_Llk1VS" href="http://www.unionzs.com:8080/online.html"></a>
+                            <a class="c-linkblock linkblock_Llk1VS" href="http://www.unionzs.com:8080/online.html" target="_Blank"></a>
                             <div class="c-div div_22zIGv links c-states"></div>
                             <div class="c-div div_GsZLSu">
                                 <h1 class="c-heading heading_LTuoru">全国辅导机构</h1>
@@ -219,14 +219,14 @@
                             <div class="row c-row row_1slrV0">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_lYzEQd">
                                     <div class="c-div div_EkevHp">
-                                        <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/to0CXzweJd3WWvVI1oiT0g"></a>
+                                        <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/to0CXzweJd3WWvVI1oiT0g" target="_Blank"></a>
                                         <img class="c-image image_jXzulv" src="../assets/img/origin_eight_one.png">
                                         <h1 class="c-heading heading_LTuoru bidu">调剂问答</h1>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_z0pUtA">
                                     <div class="c-div div_EkevHp">
-                                        <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/GhvHT0MOjyo8c9l6xBQecQ"></a>
+                                        <a class="c-linkblock linkblock_Llk1VS" href="https://mp.weixin.qq.com/s/Bs2dFprNwsmtNtPbDrpsQQ" target="_Blank"></a>
                                         <img class="c-image image_jXzulv" src="../assets/img/origin_eight_two.png">
                                         <h1 class="c-heading heading_LTuoru bidu">调剂专题使用介绍，必看！</h1>
                                     </div>
@@ -294,13 +294,13 @@
     <div id="region-modal" class="modal">
         <div class="areas modal-contents">
             <div class="header_m">
+            <img src="../assets/img/close.png" id="imgClose">
                 <div class="c-div div_KxuuT1 area-part">
                     <h1 class="c-heading heading_RFblVD">选择地区</h1>
                     <div class="c-div div_c0BzRm"></div>
                 </div>
                 <div class="cont">
                     <div id="provinces">
-                        
                     </div>
                     <div class="areaBtn">
                         <a class="btn c-button button_9dk3VD" id="close-region" type="button" onclick="validateRegion()">选好了</a>
@@ -312,6 +312,7 @@
     <div id="project-modal" class="modal">
         <div class="areas modal-contents">
             <div class="header_m">
+                <img src="../assets/img/close.png" id="imgCloses">
                 <div class="c-div div_KxuuT1 area-part">
                     <h1 class="c-heading heading_RFblVD">选择项目</h1>
                     <div class="c-div div_c0BzRm"></div>
@@ -327,9 +328,10 @@
     </div>
     <div id="tel-modal" class="modal">
         <div class="telCo modal-contents modal-controller">
-            <div class="header_ms">
+            <div class="header_ms" style="position:relative">
+                <img src="../assets/img/close.png" id="imgClosess" style="width:20px;position: absolute;right: 5px;top: 5px;">
                 <span class="code">
-                    <input  type="text" id="code"  oninput="OnInput (event)" autocomplete="off" onpropertychange="OnPropChanged (event)" />
+                    <input placeholder="请输入验证码" type="text" id="code"  oninput="OnInput (event)" autocomplete="off" onpropertychange="OnPropChanged (event)" />
                 </span>
                 <span class="codeCheck">
                     <a class="checkTel" type="button" id="telCode">获取验证码</a>

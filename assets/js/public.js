@@ -44,23 +44,26 @@ function validatetelephone(telephone) {
 function countDown(id, time){
     let tempTag = $(id);
     tempTag.addClass('disable');
-    tempTag.text('60');
+    tempTag.text('重新获取(60)');
     tempTag.css('opacity','0.6');
-    tempTag.css('paddingLeft','42%');
-    tempTag.css('paddingRight','42%');
+    tempTag.css('paddingLeft','8%');
+    tempTag.css('paddingRight','8%');
     var flag = true;
     if (flag) {
         flag = false;
         var timer = setInterval(() => {
             time--;
-            tempTag.text(time);
+            tempTag.text('重新获取('+time+')');
+            if (time < 10) {
+                tempTag.text('重新获取(0'+time+')');
+            };
             if (time === 0) {
                 clearInterval(timer);
                 tempTag.text('重新获取');
                 tempTag.removeClass('disable');
                 tempTag.css('opacity','1');
-                tempTag.css('paddingLeft','22%');
-                tempTag.css('paddingRight','22%');
+                tempTag.css('paddingLeft','20%');
+                tempTag.css('paddingRight','18%');
                 flag = true;
             }
         }, 1000)
