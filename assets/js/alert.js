@@ -38,7 +38,7 @@ function getProvinces(){
 //获取项目
 function getDisPro(){
     request('get', '/admin/dispen/getDisPro', {}, function(data){
-        addTag(data, "#dispro", 5);
+        addTag(data, "#dispro", 4);
     });
 }
 
