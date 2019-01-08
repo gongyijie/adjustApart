@@ -1,5 +1,7 @@
 var saveRegion = [];//地区名数组
 var saveProject = [];//项目数组
+var lock = true;
+
 
 $(function(){
     getProvinces();
@@ -193,7 +195,9 @@ function sendInformation() {
     });
     //手机验证码
     $('#telCode').click(function () {
-        if ($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取" ){
+        if (($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取") && lock ){
+            countDown('#telCode', 60);
+            lock = false;
             sendSmsCode(phone);
         }
     });

@@ -58,6 +58,7 @@ function countDown(id, time){
                 tempTag.text('重新获取(0'+time+')');
             };
             if (time === 0) {
+                lock = true;
                 clearInterval(timer);
                 tempTag.text('重新获取');
                 tempTag.removeClass('disable');
@@ -76,7 +77,7 @@ function countDown(id, time){
  */
 function sendSmsCode(phone){
     request('post', '/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
-        countDown('#telCode', 60);
+        // countDown('#telCode', 60);
     });
 }
 
