@@ -29,14 +29,14 @@ function addTag(data, id, length){
 //获取省份
 function getProvinces(){
     request('get', '/admin/dispen/getProvinces', {}, function(data){
-        addTag(data, "#provinces", 8);
+        addTag(data, "#provinces", 6);
     });
 }
 
 //获取项目
 function getDisPro(){
     request('get', '/admin/dispen/getDisPro', {}, function(data){
-        addTag(data, "#dispro", 4);
+        addTag(data, "#dispro", 6);
     });
 }
 
@@ -187,6 +187,10 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
+    
+    $('#imgClosess').click(function () {
+         $('#tel-modal').css("display","none");
+    });
     //手机验证码
     $('#telCode').click(function () {
         if ($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取" ){

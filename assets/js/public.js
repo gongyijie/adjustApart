@@ -46,14 +46,14 @@ function countDown(id, time){
     tempTag.addClass('disable');
     tempTag.text('60');
     tempTag.css('opacity','0.6');
-    tempTag.css('paddingLeft','40%');
-    tempTag.css('paddingRight','40%');
+    tempTag.css('paddingLeft','10%');
+    tempTag.css('paddingRight','10%');
     var flag = true;
     if (flag) {
         flag = false;
         var timer = setInterval(() => {
             time--;
-            tempTag.text(time);
+            tempTag.text('重新获取('+time+')');
             if (time === 0) {
                 clearInterval(timer);
                 tempTag.text('重新获取');

@@ -60,7 +60,9 @@ function sendInformation() {
     }
 
     $('#tel-modal').css("display","block");
-
+    $('#imgClosess').click(function () {
+         $('#tel-modal').css("display","none");
+    });
     //手机验证码
     $('#telCode').click(function () {
         sendSmsCode(phone);
