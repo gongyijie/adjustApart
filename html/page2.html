@@ -384,7 +384,9 @@
     <div id="tel-modal" class="modal">
         <div class="telCo modal-contents modal-controller">
             <div class="header_ms">
-                 <span class="code"><input type="text" id="code" autocomplete="off"  oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" /></span>
+                 <span class="code">
+                    <input placeholder="请输入验证码" type="text" id="code" autocomplete="off"  oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" />
+                 </span>
                 <span class="codeCheck"><a class="checkTel" type="button" id="telCode">获取验证码</a></span>
             </div>
             <a class="checkTels" type="button" id="close-tel">确定</a>
