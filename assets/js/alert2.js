@@ -77,7 +77,6 @@ function sendInformation() {
  * data 信息
  */
 function setInfo(data){
-    
 	majorName = data.major_name;
 	$('#major_name').html(majorName+'<br>调剂招生');
 	$('#title').html('2019'+data.major_name+'调剂招生');
@@ -94,8 +93,10 @@ function setInfo(data){
 		$('#download').attr("href",data.online_application);
 		$('#download').text('去申请');
 		$('#download').attr("style","background-image:url(../assets/img/bottom_a.png)");
+		$('#informations').html(data.mode_intro);
 	}else if (data.mode == 1) {
 		$('#download').attr("href",data.file_download);
+		$('#informations').html(data.mode_intro);
 	};
 
 }

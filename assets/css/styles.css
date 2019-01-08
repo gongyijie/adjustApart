@@ -1,4 +1,9 @@
 @media all {
+    .header_m img{
+        width: 20px;
+        float: right;
+        margin: 5px;
+    }
 	.header_ms{
         display:flex;
         justify-content:space-between;

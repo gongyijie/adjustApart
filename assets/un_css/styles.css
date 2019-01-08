@@ -366,6 +366,12 @@
     background: rgba(18, 23, 55, 0.9);
 }
 } 
+@media (min-width: 1000px){
+   #major_logo{
+        width: 139.2px;
+    } 
+}
+
 @media (max-width: 1240px) {
 	.modal-contents .code{
         margin: 18% 5% 4% 18%;

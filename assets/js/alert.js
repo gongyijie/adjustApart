@@ -48,6 +48,10 @@ function showRegion(){
     $('#close-region').click(function () {
         region_modal.css("display","none");
     });
+
+    $('#imgClose').click(function () {
+        region_modal.css("display","none");
+    });
 }
 
  //显示项目模态框
@@ -56,6 +60,9 @@ function showProject() {
     project_modal.css("display","block");
 
     $('#close-project').click(function () {
+        project_modal.css("display","none");
+    });
+    $('#imgCloses').click(function () {
         project_modal.css("display","none");
     });
 }
