@@ -92,7 +92,7 @@ function setInfo(data){
 	addImg(data.major_confirm_id, data.major_follow_id);
 	if (data.mode == 0) {
 		$('#download').attr("href",data.online_application);
-		$('#download').text('调剂系统');
+		$('#download').text('去申请');
 		$('#download').attr("style","background-image:url(../assets/img/bottom_a.png)");
 	}else if (data.mode == 1) {
 		$('#download').attr("href",data.file_download);
