@@ -816,14 +816,14 @@
 	    height: 360px;
 	}
 	.modal-contents .code{
-        margin:60px 2% 4% 11%;
+        margin:60px 0% 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 38%;
         margin: 71px 0% 0% 0px;
     }
     .modal-contents input {
-	    width: 100%;
+	    width: 95%;
         text-align: center;
         border-style: solid;
         border-width: 1px;
@@ -867,14 +867,14 @@
         margin-right: auto;
     }
 	.modal-contents .code{
-        margin: 50px 5% 4% 11%;
+        margin: 50px 0% 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 80px;
         margin: 62px 11% 4% 0;
     }
     .modal-contents input {
-	    width: 100%;
+	    width: 95%;
         text-align: center;
         border-style: solid;
         border-width: 1px;
