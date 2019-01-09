@@ -779,7 +779,7 @@
         margin: 71px 0% 0% 0px;
     }
     .modal-contents input {
-        width: 100%;
+        width: 90%;
         text-align: center;
         border-style: solid;
         border-width: 1px;
@@ -823,14 +823,14 @@
         margin-right: auto;
     }
     .modal-contents .code{
-        margin: 50px 5% 4% 11%;
+        margin: 55px 5% 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 80px;
-        margin: 62px 11% 4% 0;
+        margin: 62px 6% 4% 0;
     }
     .modal-contents input {
-        width: 100%;
+        width: 90%;
         text-align: center;
         border-style: solid;
         border-width: 1px;
