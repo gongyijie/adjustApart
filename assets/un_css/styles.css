@@ -417,18 +417,18 @@
 }
 @media (max-width: 1120px) {
     .modal-contents input {
-        width: 213px;
+        width: 100%;
     }
     .modal-contents .checkTel {
         padding: 13px 10%;
         font-size: 13px;
     }
     .modal-contents .code {
-        margin: 13% 3% 4% 17%;
+        margin: 13% 0 4% 17%;
     }
     .modal-contents .codeCheck {
         width: 150px;
-        margin: 16% 14% 4% 0;
+        margin: 16% 0 4% 0;
     }
     .modal-contents .checkTels {
         padding: 11px 30%;
@@ -439,18 +439,18 @@
 }
 @media (max-width: 950px) {
     .modal-contents input {
-        width: 213px;
+        width:100%;
     }
     .modal-contents .checkTel {
         padding: 13px 8%;
         font-size: 13px;
     }
     .modal-contents .code {
-        margin: 19% 3% 4% 17%;
+        margin: 75px 3% 4% 17%;
     }
     .modal-contents .codeCheck {
         width: 150px;
-        margin: 22% 14% 4% 0;
+        margin: 89px 1% 4% 0;
     }
     .modal-contents .checkTels {
         height: 43px;
