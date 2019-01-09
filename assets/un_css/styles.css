@@ -772,7 +772,7 @@
         height: 360px;
     }
     .modal-contents .code{
-        margin:60px 2% 4% 11%;
+        margin:60px 0 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 38%;
@@ -823,7 +823,7 @@
         margin-right: auto;
     }
     .modal-contents .code{
-        margin: 55px 5% 4% 11%;
+        margin: 55px 0 4% 11%;
     }
     .modal-contents .codeCheck{
         width: 80px;
