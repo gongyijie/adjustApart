@@ -77,7 +77,7 @@ function countDown(id, time){
  */
 function sendSmsCode(phone){
     request('post', '/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
-        // countDown('#telCode', 60);
+        countDown('#telCode', 60);
     });
 }
 

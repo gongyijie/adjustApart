@@ -1,5 +1,5 @@
 var majorName;
-
+var lock = true;
 (function($) {
     var re = /([^&=]+)=?([^&]*)/g,
         decodeRE = /\+/g,
@@ -62,7 +62,12 @@ function sendInformation() {
     });
     //手机验证码
     $('#telCode').click(function () {
-        sendSmsCode(phone);
+    	if (($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取") && lock ){
+            countDown('#telCode', 60);
+            lock = false;
+            sendSmsCode(phone);
+        }
+        // sendSmsCode(phone);
     });
 
     $('#close-tel').click(function () {
