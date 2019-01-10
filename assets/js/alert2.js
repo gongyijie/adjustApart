@@ -17,7 +17,7 @@ $(function(){
     var url =  window.location.href;
     var  param = $.parseParams(url.split('?')[1] || ''); // 解析问号后的 url 参数
     
-	getCurrentMajorMsg(param.majorId);
+	getCurrentMajorMsg(param.majorName);
 });
 
 /**
@@ -25,7 +25,7 @@ $(function(){
  * id 院校专业id
  */
 function getCurrentMajorMsg(id) {
-	request('get', '/admin/dispen/getCurrentMajorMsg', { "majorId": id }, function(data){
+	request('get', '/admin/dispen/getCurrentMajorMsg', { "majorName": id }, function(data){
 		$.isArray(data) ? setInfo(data[0]) : setInfo(data);
     });
 }
@@ -62,12 +62,11 @@ function sendInformation() {
     });
     //手机验证码
     $('#telCode').click(function () {
-    	if (($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取") && lock ){
+        if (($('#telCode').text() == "获取验证码" || $('#telCode').text() == "重新获取") && lock ){
             countDown('#telCode', 60);
             lock = false;
             sendSmsCode(phone);
         }
-        // sendSmsCode(phone);
     });
 
     $('#close-tel').click(function () {
