@@ -6,10 +6,11 @@
  * callback 回调函数
  */
 function request(type, url, data, callback){
-	let root = "http://www.lishanlei.cn"
+	// let root = "http://www.lishanlei.cn"
     $.ajax({
         type : type,
-        url  : root+url,
+        // url  : root+url,
+        url  : url,
         dataType : 'json',
         data : data,
         success  : function(data) {
@@ -76,7 +77,7 @@ function countDown(id, time){
  * phone 电话号码
  */
 function sendSmsCode(phone){
-    request('post', '/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
+    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
         countDown('#telCode', 60);
     });
 }
@@ -87,7 +88,7 @@ function sendSmsCode(phone){
  * code 验证码
  */
 function judgeSms(phone, code, callback){
-    request('post', '/admin/dispen/judgeSms', {
+    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/judgeSms', {
         "phone" : phone,
         "smCode": code
     }, function(data){
