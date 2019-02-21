@@ -30,14 +30,14 @@ function addTag(data, id, length){
 
 //获取省份
 function getProvinces(){
-    request('get', 'tiaoji.mbahelper.cn:8889/admin/dispen/getProvinces', {}, function(data){
+    request('get', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/getProvinces', {}, function(data){
         addTag(data, "#provinces", 6);
     });
 }
 
 //获取项目
 function getDisPro(){
-    request('get', 'tiaoji.mbahelper.cn:8889/admin/dispen/getDisPro', {}, function(data){
+    request('get', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/getDisPro', {}, function(data){
         addTag(data, "#dispro", 4);
     });
 }
@@ -158,7 +158,7 @@ function validateProject() {
  * phone 电话号码
  */
 function subscribe(phone) {
-    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/subscribe', {
+    request('post', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/subscribe', {
         "proArr" : saveRegion,
         "jectArr": saveProject,
         "phone"  : phone,

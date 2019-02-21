@@ -77,7 +77,7 @@ function countDown(id, time){
  * phone 电话号码
  */
 function sendSmsCode(phone){
-    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
+    request('post', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/sendSmsCode', { 'phone' : phone }, function(data){
         countDown('#telCode', 60);
     });
 }
@@ -88,7 +88,7 @@ function sendSmsCode(phone){
  * code 验证码
  */
 function judgeSms(phone, code, callback){
-    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/judgeSms', {
+    request('post', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/judgeSms', {
         "phone" : phone,
         "smCode": code
     }, function(data){

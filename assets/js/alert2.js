@@ -25,7 +25,7 @@ $(function(){
  * id 院校专业id
  */
 function getCurrentMajorMsg(id) {
-	request('get', 'tiaoji.mbahelper.cn:8889/admin/dispen/getCurrentMajorMsg', { "majorName": id }, function(data){
+	request('get', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/getCurrentMajorMsg', { "majorName": id }, function(data){
 		$.isArray(data) ? setInfo(data[0]) : setInfo(data);
     });
 }
@@ -35,7 +35,7 @@ function getCurrentMajorMsg(id) {
  * phone 电话号码
  */
 function subscribe(phone) {
-    request('post', 'tiaoji.mbahelper.cn:8889/admin/dispen/setMajorSubscribe', {
+    request('post', 'http://tiaoji.mbahelper.cn:8889/admin/dispen/setMajorSubscribe', {
         "majorName": majorName,
         "phone"    : phone,
         "grade"    : 1
@@ -228,7 +228,7 @@ function addProjectTag(data){
 	        strP += "<tr><td><b>" + arr[i] + "</b></td></tr>";
         }
         //拼凑table
-        strP = "<table class='bold' style='text-align: left;color: #121737'>" + strP + "</table>";
+        strP = "<table class='bold' style='text-align: left;color: #121737;display: inline-block;'>" + strP + "</table>";
 
 	    //将生成的table
 	    value.graduation_certificate = strP;
